@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu de navigation animé</title>
+    <title>Galerie d'images avec filtrage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,17 +12,24 @@
 
     <!-- Tache2 exo1 -->
     <header>
-        <div class="logo">
-            <img src="logo-bakeli.png" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <section class="hero-section">
+            <nav class="navbar">
+                <div class="data-container">
+                    <img src="png" class="Logo">
+                    <div id="menu-time" class="menu-data animate__animated ">
+                        <a onclick="closebar()"><i id="close" class="size fa-solid fa-xmark"></i></a>
+                        <a href="" id="active-link">Acceuil</a>
+                        <a href="">A propos</a>
+                        <a href="">Services</a>
+                        <a href="">Contacts</a>
+                    </div>
+                    <a id="Menu-bar" onclick="menubar()"><i class="size-icon fa-solid fa-bars"></i></a>
+                </div>
+            </nav>
+            <div class="hero-section-content">
+                <h1>CONTENU</h1>
+            </div>
+        </section>
     </header>
 
 
