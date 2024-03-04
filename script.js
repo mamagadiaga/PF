@@ -24,3 +24,23 @@ function menubar() {
   
 
 
+
+
+// Tache2 exo1
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-button");
+    const images = document.querySelectorAll(".image");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const filter = button.getAttribute("data-filter");
+            images.forEach(image => {
+                if (filter === "all" || image.classList.contains(filter)) {
+                    image.classList.remove("hidden");
+                } else {
+                    image.classList.add("hidden");
+                }
+            });
+        });
+    });
+});
