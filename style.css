@@ -218,3 +218,40 @@ a:hover {
 .hidden {
     display: none;
 }
+
+
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(#3498db, #2ecc71, #e74c3c, #3498db);
+    animation: rotate 2s linear infinite, change-color 6s linear infinite;
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes change-color {
+    0% { background: conic-gradient(#053555, #022c14, #5f1108, #000000); }
+    20% { background: conic-gradient(#FF5733, #6E0DD0, #0A43F3, #FFE433); }
+    40% { background: conic-gradient(#DC14C4, #14E3C4, #E31414, #8C14E3); }
+    60% { background: conic-gradient(#F4D03F, #8F00FF, #00FFD0, #14FDE3); }
+    80% { background: conic-gradient(#5B2C6F, #4F6A36, #FF5733, #5E7D7E); }
+    100% { background: conic-gradient(#FF5733, #6E0DD0, #0A43F3, #FFE433); }
+}
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  border: 3px solid #3498db; 
+  border-radius: 50%;
+}
