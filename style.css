@@ -222,37 +222,41 @@ a:hover {
 
 /* Tache2 exo3 */
 .loader {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: conic-gradient(#3498db, #2ecc71, #e74c3c, #3498db);
-    animation: rotate 2s linear infinite, change-color 6s linear infinite;
-    
+    width: 50px;
+    height: 50px;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
   
-
-
-  @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  .circle {
+    width: 20px;
+    height: 20px;
+    background-color: #009688;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 1.2s infinite ease-in-out;
   }
   
-  @keyframes change-color {
-    0% { background: conic-gradient(#053555, #022c14, #5f1108, #000000); }
-    20% { background: conic-gradient(#FF5733, #6E0DD0, #0A43F3, #FFE433); }
-    40% { background: conic-gradient(#DC14C4, #14E3C4, #E31414, #8C14E3); }
-    60% { background: conic-gradient(#F4D03F, #8F00FF, #00FFD0, #14FDE3); }
-    80% { background: conic-gradient(#5B2C6F, #4F6A36, #FF5733, #5E7D7E); }
-    100% { background: conic-gradient(#FF5733, #6E0DD0, #0A43F3, #FFE433); }
-}
-.loader::before,
-.loader::after {
-  content: '';
-  position: absolute;
-  border: 1px solid #3498db; 
-  border-radius: 50%;
-}
+  .circle:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+  
+  .circle:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  
+  .circle:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+  
