@@ -28,19 +28,25 @@ function menubar() {
 
 // Tache2 exo1
 document.addEventListener("DOMContentLoaded", function() {
-    const filterButtons = document.querySelectorAll(".filter-button");
-    const images = document.querySelectorAll(".image");
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const images = document.querySelectorAll(".image");
 
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const filter = button.getAttribute("data-filter");
-            images.forEach(image => {
-                if (filter === "all" || image.classList.contains(filter)) {
-                    image.classList.remove("hidden");
-                } else {
-                    image.classList.add("hidden");
-                }
-            });
-        });
-    });
+  filterButtons.forEach(button => {
+      button.addEventListener("click", function() {
+          filterButtons.forEach(btn => {
+              btn.classList.remove("active");
+          });
+
+          button.classList.add("active");
+
+          const filter = button.getAttribute("data-filter");
+          images.forEach(image => {
+              if (filter === "all" || image.classList.contains(filter)) {
+                  image.classList.remove("hidden");
+              } else {
+                  image.classList.add("hidden");
+              }
+          });
+      });
+  });
 });

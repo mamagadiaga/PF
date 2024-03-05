@@ -156,7 +156,11 @@ a:hover {
     background-color: #000;
     color: white;
 }
-
+.active {
+    background-color: black;
+    color: white;
+  }
+  
 .gallery {
     display: flex;
     flex-wrap: wrap;
