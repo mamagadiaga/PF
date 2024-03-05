@@ -222,8 +222,8 @@ a:hover {
 
 /* Tache2 exo3 */
 .loader {
-    width: 100px;
-    height: 100px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: conic-gradient(#3498db, #2ecc71, #e74c3c, #3498db);
     animation: rotate 2s linear infinite, change-color 6s linear infinite;
@@ -253,6 +253,6 @@ a:hover {
 .loader::after {
   content: '';
   position: absolute;
-  border: 3px solid #3498db; 
+  border: 1px solid #3498db; 
   border-radius: 50%;
 }
